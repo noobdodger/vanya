@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script>
         function play() {
+          document.getElementById("container").classList.add("active");
           var audio = document.getElementById("audio");
           audio.play();
+          setTimeout(del,2000);
+        }
+        function del() {
+          document.getElementById("container").classList.remove("active");
         }
       </script>
-  
-      <input type="button" value="Хто я?" onclick="play()">
+      <div id="container" class="container">
+        <button type="button" onclick="play()">Хто я?</button>
+      </div>
       <audio id="audio" src="vania.mp3"></audio>
   
 </body>

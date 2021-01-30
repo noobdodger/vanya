@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    margin: 0;
+    background: #F4A261;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: #E9C46A;
+    
+}
+
+.active {
+    animation: anim-circle 2s ease-in-out;
+}
+
+@keyframes anim-circle {
+    0% {
+        clip-path: circle(100% at 50% 50%);
+    }
+    20% {
+        clip-path: circle(50% at 50% 50%);
+    }
+    25% {
+        clip-path: circle(55% at 50% 50%);
+    }
+    40% {
+        clip-path: circle(40% at 50% 50%);
+    }
+    75% {
+        clip-path: circle(35% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+}
+
+button {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 2px solid #264653;
+    background: #2A9D8F;
+    box-shadow: 0 5px 0 #264653;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+button:active {
+    box-shadow: none;
+    transition: 0.1s all linear;
+    top: calc(50% + 5px);
+    background: #264653;
+}
